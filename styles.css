@@ -164,16 +164,36 @@ figure:last-child img {
         row-gap: 2rem;
     }
 
-    /* Tiger span 2 columns & Center */
-    figure:last-child {
-        grid-column: span 2;
-        width: 100%;
+    /* Mobile (Less than 768px) */
+@media (max-width: 767px) {
+    /* Navigation becomes full-width buttons */
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem; /* Adds spacing between buttons */
+        width: 95%; /* Makes navigation take up 95% of screen width */
         margin: 0 auto;
     }
 
-    figure:last-child img {
+    nav li {
         width: 100%;
-        max-width: 100%;
+    }
+
+    nav a {
+        display: block;
+        width: 100%;
+        padding: 1rem;
+        background-color: #d9043d;
+        color: white;
+        text-align: center;
+        border: 2px solid #97bf04; /* Adds the green border */
+        font-size: 1.2rem;
+    }
+
+    /* Set photo gallery to one column */
+    #gallery-container {
+        grid-template-columns: 1fr;
     }
 }
 
