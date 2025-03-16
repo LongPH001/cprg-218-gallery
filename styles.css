@@ -354,13 +354,14 @@ figcaption p {
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 1rem; /* Adds spacing between buttons */
         width: 95%; /* Makes navigation take up 95% of screen width */
         margin: 0 auto;
+        padding: 0; /* Remove unnecessary padding */
     }
 
     nav li {
         width: 100%;
+        margin-bottom: 0.5rem; /* Adds spacing between buttons */
     }
 
     nav a {
@@ -374,11 +375,17 @@ figcaption p {
         font-size: 1.2rem;
     }
 
+    /* Push content down to avoid overlap */
+    main {
+        padding-top: 2rem; /* Adjust this if needed */
+    }
+
     /* Set photo gallery to one column */
     #gallery-container {
         grid-template-columns: 1fr;
     }
 }
+
 
 footer {
     background-color: #d9043d;
