@@ -1,0 +1,116 @@
+/* General Styles */
+body {
+    font-family: sans-serif;
+    background-color: #cccccc;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+header {
+    background-color: #120323;
+    text-align: center;
+    padding: 2rem 0;
+}
+
+header img {
+    max-width: 150px;
+}
+
+h1 {
+    color: #97bf04;
+    font-size: 2rem;
+    margin: 0.5rem 0;
+}
+
+/* Navigation */
+nav {
+    background-color: #d9043d;
+    padding: 1rem;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    margin: 0;
+}
+
+nav li {
+    display: inline;
+    margin: 0 1rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Main Content */
+main {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Section Title */
+h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+/* Gallery Grid */
+#gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    justify-items: center;
+}
+
+/* Image Card */
+figure {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 650px;
+    margin: 0;
+}
+
+figure img {
+    width: 100%;
+    max-width: 650px;
+    border-bottom: 10px solid #97bf04;
+    display: block;
+    margin: 0 auto;
+}
+
+figcaption {
+    padding-top: 1rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+figcaption p {
+    font-size: 1rem;
+    color: #333;
+}
+
+/* Footer */
+footer {
+    background-color: #d9043d;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
