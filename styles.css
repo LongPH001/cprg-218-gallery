@@ -164,7 +164,190 @@ figure:last-child img {
         row-gap: 2rem;
     }
 
-    /* Mobile (Less than 768px) */
+    /* Tiger span 2 columns & Center */
+    figure:last-child {
+        grid-column: span 2;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    figure:last-child img {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: sans-serif;
+    background-color: #cccccc;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden; /* Prevents unwanted horizontal scrolling */
+}
+
+/* Header */
+header {
+    background-color: #120323;
+    text-align: center;
+    padding: 2rem 0;
+}
+
+header img {
+    max-width: 150px;
+}
+
+h1 {
+    color: #97bf04;
+    font-size: 2rem;
+    margin: 0.5rem 0;
+}
+
+/* Navigation */
+nav {
+    background-color: #d9043d;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    padding: 1rem 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap; 
+    padding: 0;
+}
+
+/* Navigation links */
+nav li {
+    display: inline;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    white-space: nowrap; 
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Main content */
+main {
+    flex-grow: 1;
+    padding: 2rem;
+    max-width: 100vw;
+    margin: 0 auto;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+/* Default Gallery Grid (for wider screens) */
+#gallery-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Default: Three columns */
+    gap: 2rem;
+    justify-items: center;
+}
+
+/* Image Card */
+figure {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: left;
+    max-width: 100%;
+}
+
+/* Image Sizing */
+figure img {
+    width: 100%;
+    max-width: 650px;
+    border-bottom: 10px solid #97bf04;
+    display: block;
+}
+
+/* Caption Formatting */
+figcaption {
+    padding-top: 1rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+figcaption p {
+    font-size: 1rem;
+    color: #333;
+    text-align: left;
+}
+
+/* Desktop - Tiger spans 2 columns */
+@media (min-width: 1000px) {
+    #gallery-container {
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 4rem;
+    }
+
+    figure:last-child {
+        grid-column: span 2;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    figure:last-child img {
+        width: 100%;
+        max-height: 500px;
+        object-fit: cover;
+    }
+}
+
+/* Tablet (Less than 1000px) */
+@media (max-width: 999px) {
+    nav {
+        width: 100%;
+    }
+
+    /* Change Gallery to 2 Columns */
+    #gallery-container {
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 2rem;
+    }
+
+    /* Make Tiger span 2 columns & Center it */
+    figure:last-child {
+        grid-column: span 2;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    figure:last-child img {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+/* Mobile (Less than 768px) */
 @media (max-width: 767px) {
     /* Navigation becomes full-width buttons */
     nav ul {
